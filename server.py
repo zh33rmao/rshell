@@ -46,7 +46,7 @@ def send_commands(conn):
         if len(cmd.encode(encoding="utf-8")) > 0:
             conn.send(cmd.encode(encoding="utf-8"))
             client_response = conn.recv(4096).decode("utf-8")
-            print(client_response[0], end="")
+            print(client_response, end="")
 
 def main():
     socket_create()
